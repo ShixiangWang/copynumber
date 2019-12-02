@@ -22,6 +22,13 @@ Vignette is removed in this package, please read official documentation
 at
 <https://bioconductor.org/packages/release/bioc/html/copynumber.html>.
 
+## NOTE
+
+The source code comes from copynumber v1.26.0, any package updates
+please inform me by issue or email.
+
+Contribution is welcome.
+
 ## Installation
 
 Install this modified package from GitHub:
