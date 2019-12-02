@@ -1,7 +1,7 @@
 Package: copynumber
 Title: Segmentation of single- and multi-track copy number data by
         penalized least squares regression
-Version: 1.26.0
+Version: 1.26.38
 Author: Gro Nilsen, Knut Liestoel and Ole Christian Lingjaerde
 Maintainer: Gro Nilsen <gronilse@ifi.uio.no>
 Description: Penalized least squares regression is applied to fit
