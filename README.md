@@ -22,6 +22,9 @@ Vignette is removed in this package, please read official documentation
 at
 <https://bioconductor.org/packages/release/bioc/html/copynumber.html>.
 
+**Hope someday the official package will adopt all necessary genome
+assemblies.**
+
 ## NOTE
 
 The source code comes from copynumber v1.26.0, any package updates
@@ -34,7 +37,12 @@ Contribution is welcome.
 Install this modified package from GitHub:
 
 ``` r
-devtools::install_github("ShixiangWang/copynumber")
+# You can install the orignal package from bioconductor fistly
+# to install all dependencies
+# BiocManager::install("copynumber")
+
+# Then install this hg38-supported package
+remotes::install_github("ShixiangWang/copynumber")
 ```
 
 ## Test copynumber
