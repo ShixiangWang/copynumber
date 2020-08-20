@@ -28,8 +28,8 @@ multipcf <- function(data, pos.unit = "bp", arms = NULL, Y = NULL, gamma = 40, n
   }
 
   # Check assembly input:
-  if (!assembly %in% c("hg19", "hg18", "hg17", "hg16", "mm7", "mm8", "mm9", "hg38", "mm10")) {
-    stop("assembly must be one of hg19, hg18, hg17 or hg16", call. = FALSE)
+  if (!assembly %in% c("hg38", "hg19", "hg18", "hg17", "hg16", "mm7", "mm8", "mm9", "mm10")) {
+    stop("assembly must be one of hg{16, 17, 18, 19, 38}, mm{7, 8, 9, 10}", call. = FALSE)
   }
 
   # Is data a file:
@@ -191,7 +191,7 @@ multipcf <- function(data, pos.unit = "bp", arms = NULL, Y = NULL, gamma = 40, n
     }
 
     # Check sd; cannot normalize if sd=0 or if sd=NA:
-    if (any(sd == 0) || any(is.na(sd))) {
+    if (any(sd == 0) || any(is.na(sd)) || nrow(arm.data) == 1L) {
       # not run multipcf, return mean for each sample:
       m <- apply(arm.data, 2, mean)
       dim(m) <- c(length(m), 1)
@@ -289,6 +289,9 @@ multipcf <- function(data, pos.unit = "bp", arms = NULL, Y = NULL, gamma = 40, n
     # Append results for this arm:
     segments <- rbind(segments, segments.c)
     if (return.est) {
+      if( ncol(yhat) == ncol(mpcf.est) ) {
+        yhat = t(yhat)
+      }
       mpcf.est <- rbind(mpcf.est, t(yhat))
     }
 

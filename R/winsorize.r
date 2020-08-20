@@ -49,9 +49,10 @@ winsorize <- function(data, pos.unit = "bp", arms = NULL, method = "mad", tau = 
   stopifnot(method %in% c("mad", "pcf"))
 
   # Check assembly input:
-  if (!assembly %in% c("hg19", "hg18", "hg17", "hg16", "mm7", "mm8", "mm9", "hg38", "mm10")) {
-    stop("assembly must be one of hg19, hg18, hg17 or hg16", call. = FALSE)
+  if (!assembly %in% c("hg38", "hg19", "hg18", "hg17", "hg16", "mm7", "mm8", "mm9", "mm10")) {
+    stop("assembly must be one of hg{16, 17, 18, 19, 38}, mm{7, 8, 9, 10}", call. = FALSE)
   }
+
 
   # Check data input: can either be a matrix/data frame or a filename
   stopifnot(class(data) %in% c("matrix", "data.frame", "character"))
