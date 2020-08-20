@@ -16,9 +16,9 @@ with minor modification for supporting extra genome assemblies
 <https://github.com/aroneklund/copynumber> is adopted to generate ‘hg38’
 object, the process is recorded in `data-raw/`.
 
-This package may be useful for running sequenza with \`assembly =
-“hg38”’ and other software calling copy number segments with
-‘copynumber’ package.
+This package may be useful for running sequenza with `assembly = "hg38"`
+and other software calling copy number segments with ‘copynumber’
+package.
 
 Vignette is removed in this package, please read official documentation
 at
