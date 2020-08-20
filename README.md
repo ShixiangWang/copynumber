@@ -1,18 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# copynumber R package with support for hg38
+# copynumber R package with support for extra assembly
 
 <!-- badges: start -->
 
 [![HitCount](http://hits.dwyl.io/ShixiangWang/copynumber.svg)](http://hits.dwyl.io/ShixiangWang/copynumber)
+![R-CMD-check](https://github.com/ShixiangWang/copynumber/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 This package is a fork of Bioconductor R package
 [‘copynumber’](https://bioconductor.org/packages/release/bioc/html/copynumber.html)
-with minor modification for supporting hg38 genome assembly. The idea
-from <https://github.com/aroneklund/copynumber> is adopted to generate
-‘hg38’ object, the process is recorded in `data-raw/`.
+with minor modification for supporting extra genome assemblies
+(e.g. hg38, mm10). The idea from
+<https://github.com/aroneklund/copynumber> is adopted to generate ‘hg38’
+object, the process is recorded in `data-raw/`.
 
 This package may be useful for running sequenza with \`assembly =
 “hg38”’ and other software calling copy number segments with
@@ -24,6 +26,14 @@ at
 
 **Hope someday the official package will adopt all necessary genome
 assemblies.**
+
+## Update
+
+  - 2020-08-20
+      - fork code from <https://github.com/igordot/copynumber/> to
+        support mm10.
+      - add code suggested by @nurmians to bypass bug 1 row `arm.data`
+        in `multipcf()`.
 
 ## NOTE
 
