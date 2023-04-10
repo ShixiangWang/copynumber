@@ -3,12 +3,6 @@
 
 # copynumber R package with support for extra assembly
 
-<!-- badges: start -->
-
-[![HitCount](http://hits.dwyl.io/ShixiangWang/copynumber.svg)](http://hits.dwyl.io/ShixiangWang/copynumber)
-![R-CMD-check](https://github.com/ShixiangWang/copynumber/workflows/R-CMD-check/badge.svg)
-<!-- badges: end -->
-
 This package is a fork of Bioconductor R package
 [‘copynumber’](https://bioconductor.org/packages/release/bioc/html/copynumber.html)
 with minor modification for supporting extra genome assemblies
